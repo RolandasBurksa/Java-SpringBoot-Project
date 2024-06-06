@@ -45,8 +45,8 @@ const ListBooksComponent = () => {
               <th>Book Title </th>
               <th>Book Description </th>
               <th>Number of Pages </th>
-              <th>Book Category </th>
               <th>Book ISBN </th>
+              <th>Book Category </th>
             </tr>
           </thead>
           <tbody>
