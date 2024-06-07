@@ -1,5 +1,6 @@
+/* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
-import { getAllBooks } from "../services/BookService";
+import { deleteBook, getAllBooks } from "../services/BookService";
 import { useNavigate } from "react-router-dom";
 
 const ListBooksComponent = () => {
@@ -25,13 +26,28 @@ const ListBooksComponent = () => {
     navigate("/add-book");
   }
 
+  function updateBook(id) {
+    console.log(id);
+    navigate(`/update-book/${id}`);
+  }
+
+  function removeBook(id) {
+    deleteBook(id)
+      .then((response) => {
+        listBooks();
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
+
   return (
     <div className="container">
       <br /> <br />
       <h2 className="text-center"> List of Books</h2>
-      <button className="btn btn-primary mb-2" onClick={addNewBook}>
+      {/* <button className="btn btn-primary mb-2" onClick={addNewBook}>
         Add Book
-      </button>
+      </button> */}
       <div>
         <table className="table table-bordered table-striped">
           <thead>
@@ -41,6 +57,7 @@ const ListBooksComponent = () => {
               <th>Book Description </th>
               <th>Number of Pages </th>
               <th>Book ISBN </th>
+              <th>Actions </th>
               {/* <th>Book Category </th> */}
             </tr>
           </thead>
@@ -53,6 +70,22 @@ const ListBooksComponent = () => {
                 <td>{book.pages}</td>
                 {/* <td>{book.bookCategory}</td> */}
                 <td>{book.isbn}</td>
+                <td>
+                  <button
+                    className="btn btn-info"
+                    onClick={() => updateBook(book.id)}
+                  >
+                    Update
+                  </button>
+
+                  <button
+                    className="btn btn-danger"
+                    onClick={() => removeBook(book.id)}
+                    style={{ marginLeft: "10px" }}
+                  >
+                    Delete
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>

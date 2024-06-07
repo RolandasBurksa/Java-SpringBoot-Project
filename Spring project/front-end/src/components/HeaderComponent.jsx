@@ -1,4 +1,12 @@
+import { useNavigate } from "react-router-dom";
+
 const HeaderComponent = () => {
+  const navigate = useNavigate();
+
+  function addNewBook() {
+    navigate("/add-book");
+  }
+
   return (
     <div>
       <header>
@@ -12,6 +20,14 @@ const HeaderComponent = () => {
               Book recommendations online Application
             </a>
           </div>
+
+          <button
+            className="btn btn-outline-light mb-2"
+            style={{ marginTop: "10px", marginLeft: "20px" }}
+            onClick={addNewBook}
+          >
+            Add Book
+          </button>
         </nav>
       </header>
     </div>
