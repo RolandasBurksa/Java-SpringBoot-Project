@@ -1,37 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { getAllBooks } from "../services/BookService";
 
 const ListBooksComponent = () => {
-  const dummyData = [
-    {
-      id: 1,
-      bookTitle: "Learn Java",
-      bookDescription: "Funny book about java coding",
-      bookISBN: "098765",
-      bookCover: "",
-      numberOfPages: "325",
-      bookCategory: "Fiction",
-    },
-    {
-      id: 2,
-      bookTitle: "Learn to Dance",
-      bookDescription: "A book about dance styles",
-      bookISBN: "135792",
-      bookCover: "",
-      numberOfPages: "100",
-      bookCategory: "Free time",
-    },
-    {
-      id: 3,
-      bookTitle: "Learn Agile",
-      bookDescription: "Funny book about Agile",
-      bookISBN: "12345",
-      bookCover: "",
-      numberOfPages: "125",
-      bookCategory: "Science",
-    },
-  ];
+  const [books, setBooks] = useState([]);
 
-  const [books, setBooks] = useState(dummyData);
+  useEffect(() => {
+    listBooks();
+  }, []);
+
+  function listBooks() {
+    getAllBooks()
+      .then((response) => {
+        setBooks(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
 
   return (
     <div className="container">
@@ -46,18 +31,18 @@ const ListBooksComponent = () => {
               <th>Book Description </th>
               <th>Number of Pages </th>
               <th>Book ISBN </th>
-              <th>Book Category </th>
+              {/* <th>Book Category </th> */}
             </tr>
           </thead>
           <tbody>
             {books.map((book) => (
               <tr key={book.id}>
-                <td>{book.bookCover}</td>
-                <td>{book.bookTitle}</td>
-                <td>{book.bookDescription}</td>
-                <td>{book.numberOfPages}</td>
-                <td>{book.bookCategory}</td>
-                <td>{book.bookISBN}</td>
+                <td>{book.cover}</td>
+                <td>{book.title}</td>
+                <td>{book.description}</td>
+                <td>{book.pages}</td>
+                {/* <td>{book.bookCategory}</td> */}
+                <td>{book.isbn}</td>
               </tr>
             ))}
           </tbody>
