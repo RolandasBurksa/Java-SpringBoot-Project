@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import { getAllBooks } from "../services/BookService";
+import { useNavigate } from "react-router-dom";
 
 const ListBooksComponent = () => {
   const [books, setBooks] = useState([]);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     listBooks();
@@ -18,10 +21,17 @@ const ListBooksComponent = () => {
       });
   }
 
+  function addNewBook() {
+    navigate("/add-book");
+  }
+
   return (
     <div className="container">
       <br /> <br />
       <h2 className="text-center"> List of Books</h2>
+      <button className="btn btn-primary mb-2" onClick={addNewBook}>
+        Add Book
+      </button>
       <div>
         <table className="table table-bordered table-striped">
           <thead>

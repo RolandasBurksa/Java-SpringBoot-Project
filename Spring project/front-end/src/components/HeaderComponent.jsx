@@ -2,7 +2,7 @@ const HeaderComponent = () => {
   return (
     <div>
       <header>
-        <nav className="navbar navbar-expand-md navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-md navbar-dark bg-primary">
           <div>
             <a
               href="http://localhost:3000"
