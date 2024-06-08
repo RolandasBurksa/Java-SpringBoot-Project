@@ -1,16 +1,16 @@
-import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const HeaderComponent = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  function addNewBook() {
-    navigate("/add-book");
-  }
+  // function addNewBook() {
+  //   navigate("/add-book");
+  // }
 
   return (
     <div>
       <header>
-        <nav className="navbar navbar-expand-md navbar-dark bg-primary">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
           <div>
             <a
               href="http://localhost:3000"
@@ -21,13 +21,29 @@ const HeaderComponent = () => {
             </a>
           </div>
 
-          <button
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/books">
+                  Books
+                </NavLink>
+              </li>
+
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/categories">
+                  Categories
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+
+          {/* <button
             className="btn btn-outline-light mb-2"
             style={{ marginTop: "10px", marginLeft: "20px" }}
             onClick={addNewBook}
           >
             Add Book
-          </button>
+          </button> */}
         </nav>
       </header>
     </div>

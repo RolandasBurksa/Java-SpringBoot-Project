@@ -45,9 +45,9 @@ const ListBooksComponent = () => {
     <div className="container">
       <br /> <br />
       <h2 className="text-center"> List of Books</h2>
-      {/* <button className="btn btn-primary mb-2" onClick={addNewBook}>
+      <button className="btn btn-primary mb-2" onClick={addNewBook}>
         Add Book
-      </button> */}
+      </button>
       <div>
         <table className="table table-bordered table-striped">
           <thead>
