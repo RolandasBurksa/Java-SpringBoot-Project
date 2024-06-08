@@ -41,4 +41,27 @@ public class CategoryServiceImpl implements CategoryService {
         return categories.stream().map((category) -> CategoryMapper.mapToCategoryDto(category))
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public CategoryDto updateCategory(Long categoryId, CategoryDto updatedCategory) {
+       Category category = categoryRepository.findById(categoryId).orElseThrow(
+                () -> new ResourceNotFoundException("Category do not exists with a given id: " + categoryId)
+        );
+
+       category.setCategoryName(updatedCategory.getCategoryName());
+
+       Category savedCategory = categoryRepository.save(category);
+
+        return CategoryMapper.mapToCategoryDto(savedCategory);
+    }
+
+    @Override
+    public void deleteCategory(Long categoryId) {
+        categoryRepository.findById(categoryId).orElseThrow(
+                () -> new ResourceNotFoundException("Category do not exists with a given id: " + categoryId)
+        );
+
+        categoryRepository.deleteById(categoryId);
+
+    }
 }
