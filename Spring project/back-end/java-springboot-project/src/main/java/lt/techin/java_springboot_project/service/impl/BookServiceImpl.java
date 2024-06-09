@@ -3,9 +3,11 @@ package lt.techin.java_springboot_project.service.impl;
 import lombok.AllArgsConstructor;
 import lt.techin.java_springboot_project.dto.BookDto;
 import lt.techin.java_springboot_project.entity.Book;
+import lt.techin.java_springboot_project.entity.Category;
 import lt.techin.java_springboot_project.exception.ResourceNotFoundException;
 import lt.techin.java_springboot_project.mapper.BookMapper;
 import lt.techin.java_springboot_project.repository.BookRepository;
+import lt.techin.java_springboot_project.repository.CategoryRepository;
 import lt.techin.java_springboot_project.service.BookService;
 import org.springframework.stereotype.Service;
 
@@ -18,28 +20,19 @@ public class BookServiceImpl implements BookService {
 
     private BookRepository bookRepository;
 
+    private CategoryRepository categoryRepository;
+
     @Override
     public BookDto addBook(BookDto bookDto) {
 
-//        Book book = new Book();
-//        book.setTitle(bookDto.getTitle());
-//        book.setDescription(bookDto.getDescription());
-//        book.setIsbn(bookDto.getIsbn());
-//        book.setCover(bookDto.getCover());
-//        book.setPages(bookDto.getPages());
-//
-//        Book savedBook = bookRepository.save(book);
-//
-//        BookDto savedBookDto = new BookDto();
-//        savedBookDto.setId(savedBook.getId());
-//        savedBookDto.setTitle(savedBook.getTitle());
-//        savedBookDto.setDescription(savedBook.getDescription());
-//        savedBookDto.setIsbn(savedBook.getIsbn());
-//        savedBookDto.setCover(savedBook.getCover());
-//        savedBookDto.setPages(savedBook.getPages());
-//
-//        return savedBookDto;
         Book book = BookMapper.mapToBook(bookDto);
+
+        Category category = categoryRepository.findById(bookDto.getCategoryId())
+                .orElseThrow(()->
+                        new ResourceNotFoundException("Category does not exist with id: " + bookDto.getCategoryId()));
+
+        book.setCategory(category);
+
         Book addedBook = bookRepository.save(book);
         return BookMapper.mapToBookDto(addedBook);
     }
@@ -73,6 +66,12 @@ public class BookServiceImpl implements BookService {
        book.setIsbn(bookDto.getIsbn());
        book.setCover(bookDto.getCover());
        book.setPages(bookDto.getPages());
+
+        Category category = categoryRepository.findById(bookDto.getCategoryId())
+                .orElseThrow(()->
+                        new ResourceNotFoundException("Category does not exist with id: " + bookDto.getCategoryId()));
+
+        book.setCategory(category);
 
        Book updatedBook = bookRepository.save(book);
 

@@ -17,4 +17,5 @@ public class BookDto {
     private String isbn;
     private String cover;
     private String pages;
+    private Long categoryId;
 }

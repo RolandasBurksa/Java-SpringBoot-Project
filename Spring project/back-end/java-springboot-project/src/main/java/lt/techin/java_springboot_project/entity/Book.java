@@ -30,6 +30,10 @@ public class Book {
     private String cover;
     private String pages;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "category_id")
+    private Category category;
+
 
 
 }
