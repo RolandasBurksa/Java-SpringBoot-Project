@@ -10,6 +10,9 @@
         <module name="java-springboot-project" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="java-springboot-project" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
