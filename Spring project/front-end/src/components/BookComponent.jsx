@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { getBook, saveBook, updateBook } from "../services/BookService";
 import { useNavigate, useParams } from "react-router-dom";
+import { getAllCategories } from "../services/CategoryService";
 
 const BookComponent = () => {
   const [title, setTitle] = useState("");
@@ -11,11 +12,23 @@ const BookComponent = () => {
   const [pages, setPages] = useState("");
   const navigate = useNavigate();
   const { id } = useParams();
+  const [categoryId, setCategoryId] = useState("");
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    getAllCategories()
+      .then((response) => {
+        setCategories(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
 
   function saveOrUpdateBook(e) {
     e.preventDefault();
 
-    const book = { cover, title, description, pages, isbn };
+    const book = { cover, title, description, pages, isbn, categoryId };
     console.log(book);
 
     if (id) {
@@ -64,6 +77,7 @@ const BookComponent = () => {
           setDescription(response.data.description);
           setPages(response.data.pages);
           setIsbn(response.data.isbn);
+          setCategoryId(response.data.categoryId);
         })
         .catch((error) => {
           console.error(error);
@@ -142,6 +156,22 @@ const BookComponent = () => {
                 ></input>
               </div>
 
+              <div className="form-group mb-2">
+                <label className="form-label">Select Category:</label>
+                <select
+                  className="form-control"
+                  value={categoryId}
+                  onChange={(e) => setCategoryId(e.target.value)}
+                >
+                  <option value="Select Category">Select Category</option>
+                  {categories.map((category) => (
+                    <option key={category.id} value={category.id}>
+                      {" "}
+                      {category.categoryName}{" "}
+                    </option>
+                  ))}
+                </select>
+              </div>
               <button
                 className="btn btn-success"
                 onClick={(e) => saveOrUpdateBook(e)}
