@@ -44,6 +44,9 @@ public class AuthServiceImpl implements AuthService {
 
         Set<Role> roles = new HashSet<>();
         Role userRole = roleRepository.findByName("ROLE_USER");
+        if(userRole == null) {
+            throw new BookAPIException(HttpStatus.BAD_REQUEST, "Role not found!.");
+        }
         roles.add(userRole);
 
         user.setRoles(roles);
