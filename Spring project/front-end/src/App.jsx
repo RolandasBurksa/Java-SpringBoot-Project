@@ -6,6 +6,8 @@ import ListBooksComponent from "./components/ListBooksComponent";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ListCategoryComponent from "./components/ListCategoryComponent";
 import CategoryComponent from "./components/CategoryComponent";
+import RegisterComponent from "./components/RegisterComponent";
+import LoginComponent from "./components/LoginComponent";
 
 function App() {
   return (
@@ -30,6 +32,10 @@ function App() {
             path="/edit-category/:id"
             element={<CategoryComponent />}
           ></Route>
+          {/* // http://localhost:8000/register */}
+          <Route path="/register" element={<RegisterComponent />}></Route>
+          {/* // http://localhost:8000/login */}
+          <Route path="/login" element={<LoginComponent />}></Route>
         </Routes>
         <FooterComponent />
       </BrowserRouter>

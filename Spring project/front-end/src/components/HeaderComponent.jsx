@@ -37,6 +37,32 @@ const HeaderComponent = () => {
             </ul>
           </div>
 
+          {/* <div className="collapse navbar-collapse">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <NavLink to="/register" className="nav-link">
+                  Register
+                </NavLink>
+              </li>
+            </ul>
+          </div> */}
+
+          <ul className="navbar-nav">
+            <li className="nav-item" style={{ paddingRight: "20px" }}>
+              <NavLink to="/register" className="nav-link">
+                Register
+              </NavLink>
+            </li>
+          </ul>
+
+          <ul className="navbar-nav">
+            <li className="nav-item" style={{ paddingRight: "20px" }}>
+              <NavLink to="/login" className="nav-link">
+                Login
+              </NavLink>
+            </li>
+          </ul>
+
           {/* <button
             className="btn btn-outline-light mb-2"
             style={{ marginTop: "10px", marginLeft: "20px" }}
