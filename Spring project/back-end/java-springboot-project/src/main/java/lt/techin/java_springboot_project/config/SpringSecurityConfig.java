@@ -35,6 +35,7 @@ public class SpringSecurityConfig {
         http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests((authorize) -> {
                     authorize.requestMatchers(HttpMethod.POST, "/api/auth/register").permitAll();  // Allow access to registration endpoint
+                    authorize.requestMatchers(HttpMethod.POST, "/api/auth/login").permitAll();  // Allow access to log in endpoint
                     authorize.requestMatchers(HttpMethod.POST, "/api/**").hasRole("ADMIN");
                     authorize.requestMatchers(HttpMethod.PUT, "/api/**").hasRole("ADMIN");
                     authorize.requestMatchers(HttpMethod.DELETE, "/api/**").hasRole("ADMIN");

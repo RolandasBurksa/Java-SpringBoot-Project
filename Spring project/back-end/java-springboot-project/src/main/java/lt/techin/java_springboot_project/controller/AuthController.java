@@ -1,6 +1,7 @@
 package lt.techin.java_springboot_project.controller;
 
 import lombok.AllArgsConstructor;
+import lt.techin.java_springboot_project.dto.LoginDto;
 import lt.techin.java_springboot_project.dto.RegisterDto;
 import lt.techin.java_springboot_project.service.AuthService;
 import org.springframework.http.HttpStatus;
@@ -24,4 +25,10 @@ public class AuthController {
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
+    // Build Login REST API
+    @PostMapping("/login")
+    public ResponseEntity<String> login(@RequestBody LoginDto loginDto){
+        String response =  authService.login(loginDto);
+        return new ResponseEntity<>(response,HttpStatus.OK);
+    }
 }
