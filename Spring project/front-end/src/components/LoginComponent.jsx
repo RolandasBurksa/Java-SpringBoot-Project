@@ -2,7 +2,7 @@ import { useState } from "react";
 import {
   loginAPICall,
   storeToken,
-  seveLoggedInUser,
+  saveLoggedInUser,
 } from "../services/AuthService";
 import { useNavigate } from "react-router-dom";
 
@@ -14,8 +14,8 @@ const LoginComponent = () => {
   async function handleLoginForm(e) {
     e.preventDefault();
 
-    // const loginObj = { username, password };
-    // console.log(loginObj);
+    const loginObj = { username, password };
+    console.log(loginObj);
 
     await loginAPICall(username, password)
       .then((response) => {
@@ -24,7 +24,7 @@ const LoginComponent = () => {
         const token = "Basic " + window.btoa(username + ":" + password);
         storeToken(token);
 
-        seveLoggedInUser(username);
+        saveLoggedInUser(username);
 
         navigator("/books");
 
