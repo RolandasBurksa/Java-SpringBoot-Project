@@ -7,3 +7,12 @@
   text-align: center;
   color: white;
 }
+
+.backgroundContainer {
+  /* background-image: url("../public/pexels-pixabay-159711.jpg"); */
+  background-image: url("../public/pexels-pixabay-415071.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  /* opacity: 0.9; */
+}

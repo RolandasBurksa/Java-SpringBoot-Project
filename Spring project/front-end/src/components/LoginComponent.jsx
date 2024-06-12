@@ -5,6 +5,7 @@ import {
   saveLoggedInUser,
 } from "../services/AuthService";
 import { useNavigate } from "react-router-dom";
+import "../App.css";
 
 const LoginComponent = () => {
   const [username, setUsername] = useState("");
@@ -36,56 +37,58 @@ const LoginComponent = () => {
   }
 
   return (
-    <div className="container">
-      <br /> <br />
-      <div className="'row">
-        <div className="col-md-6 offset-md-3">
-          <div className="card">
-            <div className="card-header">
-              <h2 className="text-center">Login Form</h2>
-            </div>
+    <div className="backgroundContainer">
+      <div className="container">
+        <br /> <br />
+        <div className="'row">
+          <div className="col-md-6 offset-md-3">
+            <div className="card">
+              <div className="card-header">
+                <h2 className="text-center">Login Form</h2>
+              </div>
 
-            <div className="card-body">
-              <form>
-                <div className="'row mb-3">
-                  <label className="col-3 control-label">
-                    Username or Email
-                  </label>
-                  <div className="col-md-12">
-                    <input
-                      type="text"
-                      name="username"
-                      className="form-control"
-                      placeholder="Enter username"
-                      value={username}
-                      onChange={(e) => setUsername(e.target.value)}
-                    ></input>
+              <div className="card-body">
+                <form>
+                  <div className="'row mb-3">
+                    <label className="col-3 control-label">
+                      Username or Email
+                    </label>
+                    <div className="col-md-12">
+                      <input
+                        type="text"
+                        name="username"
+                        className="form-control"
+                        placeholder="Enter username"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                      ></input>
+                    </div>
                   </div>
-                </div>
 
-                <div className="'row mb-3">
-                  <label className="col-3 control-label">Password</label>
-                  <div className="col-md-12">
-                    <input
-                      type="password"
-                      name="password"
-                      className="form-control"
-                      placeholder="Enter password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                    ></input>
+                  <div className="'row mb-3">
+                    <label className="col-3 control-label">Password</label>
+                    <div className="col-md-12">
+                      <input
+                        type="password"
+                        name="password"
+                        className="form-control"
+                        placeholder="Enter password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                      ></input>
+                    </div>
+                    <br />
+                    <div className="form-group mb-3">
+                      <button
+                        className="btn btn-primary"
+                        onClick={(e) => handleLoginForm(e)}
+                      >
+                        Submit
+                      </button>
+                    </div>
                   </div>
-                  <br />
-                  <div className="form-group mb-3">
-                    <button
-                      className="btn btn-primary"
-                      onClick={(e) => handleLoginForm(e)}
-                    >
-                      Submit
-                    </button>
-                  </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
         </div>
