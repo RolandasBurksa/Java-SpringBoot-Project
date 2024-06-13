@@ -52,7 +52,7 @@ const HeaderComponent = () => {
                   </NavLink>
                 </li>
               )}
-              {isAuth && (
+              {isAuth && usernameOrEmail === "admin" && (
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/categories">
                     Categories
