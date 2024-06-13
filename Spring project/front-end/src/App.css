@@ -13,6 +13,8 @@
   background-image: url("../public/pexels-pixabay-415071.jpg");
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 100%;
   /* opacity: 0.9; */
+  overflow-x: hidden;
+  overflow-y: auto;
 }

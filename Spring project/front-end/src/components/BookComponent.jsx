@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { getBook, saveBook, updateBook } from "../services/BookService";
 import { useNavigate, useParams } from "react-router-dom";
 import { getAllCategories } from "../services/CategoryService";
+import { Form } from "react-router-dom";
 
 const BookComponent = () => {
   const [title, setTitle] = useState("");
@@ -14,6 +15,8 @@ const BookComponent = () => {
   const { id } = useParams();
   const [categoryId, setCategoryId] = useState("");
   const [categories, setCategories] = useState([]);
+
+  const maxChars = 255; // Maximum character limit
 
   useEffect(() => {
     getAllCategories()
@@ -85,6 +88,20 @@ const BookComponent = () => {
     }
   }, [id]);
 
+  const handleDescriptionChange = (e) => {
+    setDescription(e.target.value);
+  };
+
+  const getColor = () => {
+    if (description.length > maxChars) {
+      return "red"; // Color for exceeding character limit
+    } else if (description.length >= maxChars - 10) {
+      return "orange"; // Color for nearing character limit
+    } else {
+      return "black"; // Default color
+    }
+  };
+
   return (
     <div className="container">
       <br /> <br />
@@ -131,14 +148,20 @@ const BookComponent = () => {
 
               <div className="form-group mb-2">
                 <label className="form-label">Book Description:</label>
-                <input
-                  type="text"
+                <textarea
+                  type="texarea"
                   className="form-control"
                   placeholder="Enter Book Description"
+                  rows={4}
                   name="description"
                   value={description}
-                  onChange={(e) => setDescription(e.target.value)}
-                ></input>
+                  onChange={handleDescriptionChange}
+                  maxLength={maxChars + 10} // Allowing a bit more for visual feedback
+                  // onChange={(e) => setDescription(e.target.value)}
+                ></textarea>
+                <div className="text-muted mt-1" style={{ color: getColor() }}>
+                  Character Count: {description.length}/{maxChars}
+                </div>
               </div>
 
               <div className="form-group mb-2">

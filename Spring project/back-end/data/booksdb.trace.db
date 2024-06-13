@@ -283,3 +283,165 @@ Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection wa
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
 	... 16 more
+2024-06-13 16:43:26.413613+03:00 jdbc[55]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "'Adf grds Human or vampire, the rules of survival are the same: never trust, nev... (544)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 20:31:22.353279+03:00 jdbc[95]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'Human or vampire, the rules of survival are the same: never trust, never yiel... (770)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 20:31:26.159150+03:00 jdbc[96]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'Human or vampire, the rules of survival are the same: never trust, never yiel... (770)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 20:31:38.306109+03:00 jdbc[95]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'Human or vampire, the rules of survival are the same: never trust, never yiel... (535)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 20:31:48.744674+03:00 jdbc[95]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'Human or vampire, the rules of survival are the same: never trust, never yiel... (370)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 20:47:11.436629+03:00 jdbc[95]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'Geriausia Robertos draug\\0117 \\0160arlot\\0117 sunkiai serga. Jai reikia kitos... (394)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 20:47:13.557285+03:00 jdbc[95]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'Geriausia Robertos draug\\0117 \\0160arlot\\0117 sunkiai serga. Jai reikia kitos... (394)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 20:47:22.398104+03:00 jdbc[96]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'Geriausia Robertos draug\\0117 \\0160arlot\\0117 sunkiai serga. Jai reikia kitos... (380)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 20:47:35.897023+03:00 jdbc[95]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'Geriausia Robertos draug\\0117 \\0160arlot\\0117 sunkiai serga. Jai reikia kitos... (359)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 20:47:43.385616+03:00 jdbc[96]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'Geriausia Robertos draug\\0117 \\0160arlot\\0117 sunkiai serga. Jai reikia kitos... (299)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 20:47:56.766315+03:00 jdbc[95]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'Geriausia Robertos draug\\0117 \\0160arlot\\0117 sunkiai serga. Jai reikia kitos... (262)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 20:48:50.897274+03:00 jdbc[96]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'Geriausia Robertos draug\\0117 \\0160arlot\\0117 sunkiai serga. Jai reikia kitos... (260)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 20:48:53.228066+03:00 jdbc[96]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'Geriausia Robertos draug\\0117 \\0160arlot\\0117 sunkiai serga. Jai reikia kitos... (260)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 20:48:57.255474+03:00 jdbc[95]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'Geriausia Robertos draug\\0117 \\0160arlot\\0117 sunkiai serga. Jai reikia kitos... (259)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 20:49:01.059827+03:00 jdbc[95]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'Geriausia Robertos draug\\0117 \\0160arlot\\0117 sunkiai serga. Jai reikia kitos... (258)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 20:49:04.306431+03:00 jdbc[96]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'Geriausia Robertos draug\\0117 \\0160arlot\\0117 sunkiai serga. Jai reikia kitos... (257)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 20:49:07.357606+03:00 jdbc[95]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'Geriausia Robertos draug\\0117 \\0160arlot\\0117 sunkiai serga. Jai reikia kitos... (256)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 20:49:25.388796+03:00 jdbc[95]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'Geriausia Robertos draug\\0117 \\0160arlot\\0117 sunkiai serga. Jai reikia kitos... (256)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 20:49:27.310995+03:00 jdbc[96]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'Geriausia Robertos draug\\0117 \\0160arlot\\0117 sunkiai serga. Jai reikia kitos... (256)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 20:58:38.441335+03:00 jdbc[105]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'Geriausia Robertos draug\\0117 \\0160arlot\\0117 sunkiai serga. Jai reikia kitos... (265)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:26:31.102288+03:00 jdbc[115]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "'The adopted human daughter of the Nightborn vampire king, Oraya carved her plac... (273)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:26:32.179633+03:00 jdbc[115]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "'The adopted human daughter of the Nightborn vampire king, Oraya carved her plac... (273)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:26:33.434282+03:00 jdbc[115]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "'The adopted human daughter of the Nightborn vampire king, Oraya carved her plac... (273)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:26:34.687479+03:00 jdbc[115]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "'The adopted human daughter of the Nightborn vampire king, Oraya carved her plac... (273)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:28:29.393812+03:00 jdbc[115]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (265)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:28:30.642888+03:00 jdbc[116]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (265)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:28:31.790808+03:00 jdbc[115]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (265)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:28:32.408693+03:00 jdbc[115]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (265)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:28:32.640603+03:00 jdbc[115]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (265)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:28:33.823860+03:00 jdbc[115]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (265)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:28:34.440584+03:00 jdbc[115]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (265)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:28:35.208052+03:00 jdbc[116]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (265)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:28:35.522790+03:00 jdbc[115]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (265)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:28:36.757913+03:00 jdbc[115]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (265)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:28:37.859052+03:00 jdbc[115]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (265)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:28:42.343700+03:00 jdbc[116]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (265)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:28:46.415324+03:00 jdbc[115]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (265)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:28:46.906572+03:00 jdbc[115]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (265)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:28:47.167490+03:00 jdbc[115]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (265)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:28:47.420501+03:00 jdbc[115]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (265)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:28:47.644619+03:00 jdbc[115]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (265)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:28:48.341409+03:00 jdbc[116]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (265)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:29:33.720420+03:00 jdbc[116]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (263)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:29:48.007266+03:00 jdbc[115]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (266)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:30:05.318257+03:00 jdbc[115]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (264)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:30:06.406886+03:00 jdbc[115]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (264)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:30:09.304178+03:00 jdbc[116]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (264)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:30:10.303239+03:00 jdbc[115]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (264)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:30:10.756008+03:00 jdbc[115]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (264)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:30:10.936831+03:00 jdbc[116]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (264)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:30:11.171461+03:00 jdbc[115]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (264)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:31:08.343446+03:00 jdbc[115]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "'The adopted human daughter of the Nightborn vampire king, Oraya carved her plac... (263)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:31:09.134886+03:00 jdbc[116]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "'The adopted human daughter of the Nightborn vampire king, Oraya carved her plac... (263)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 21:34:16.157705+03:00 jdbc[116]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "U&'123456789012345678901234567890123456789012345678901234567890\\000a123456789012... (261)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
