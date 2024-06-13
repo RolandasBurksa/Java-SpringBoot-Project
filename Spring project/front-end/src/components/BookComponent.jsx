@@ -101,11 +101,20 @@ const BookComponent = () => {
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Enter Book Cover"
+                  placeholder="Enter Book Cover URL"
                   name="cover"
                   value={cover}
                   onChange={(e) => setCover(e.target.value)}
                 ></input>
+                {cover && (
+                  <div className="mt-2">
+                    <img
+                      src={cover}
+                      alt="Book Cover"
+                      style={{ maxWidth: "auto", height: "100px" }}
+                    />
+                  </div>
+                )}
               </div>
 
               <div className="form-group mb-2">

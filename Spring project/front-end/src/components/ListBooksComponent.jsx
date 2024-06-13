@@ -65,7 +65,18 @@ const ListBooksComponent = () => {
             <tbody>
               {books.map((book) => (
                 <tr key={book.id}>
-                  <td>{book.cover}</td>
+                  {/* <td>{book.cover}</td> */}
+
+                  <td>
+                    {book.cover && (
+                      <img
+                        src={book.cover}
+                        alt="Book Cover"
+                        style={{ maxWidth: "auto", height: "100px" }}
+                      />
+                    )}
+                  </td>
+
                   <td>{book.title}</td>
                   <td>{book.description}</td>
                   <td>{book.pages}</td>
@@ -73,8 +84,9 @@ const ListBooksComponent = () => {
                   <td>{book.isbn}</td>
                   <td>
                     <button
-                      className="btn btn-info"
+                      className="btn btn-info mt-2 mb-3"
                       onClick={() => updateBook(book.id)}
+                      style={{ marginLeft: "10px" }}
                     >
                       Update
                     </button>

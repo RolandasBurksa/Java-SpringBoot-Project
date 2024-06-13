@@ -204,3 +204,82 @@ INSERT INTO "PUBLIC"."USERS_ROLES"("USER_ID","ROLE_ID")VALUES(?,?) [22018-224]
 2024-06-10 19:35:09.548829+03:00 jdbc[13]: exception
 org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'' (USERS_ROLES: ""USER_ID"" BIGINT NOT NULL)"; SQL statement:
 INSERT INTO "PUBLIC"."USERS_ROLES"("USER_ID","ROLE_ID")VALUES(?,?) [22018-224]
+2024-06-13 15:32:39.253069+03:00 jdbc[34]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "'NOW A MAJOR NETFLIX SERIES  THE AWARD-WINNING, CRITICALLY ACCLAIMED, MILLION-CO... (311)"; SQL statement:
+insert into books (category_id,cover,description,isbn,pages,title,id) values (?,?,?,?,?,?,default) [22001-224]
+2024-06-13 15:32:44.971086+03:00 jdbc[34]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "'NOW A MAJOR NETFLIX SERIES  THE AWARD-WINNING, CRITICALLY ACCLAIMED, MILLION-CO... (311)"; SQL statement:
+insert into books (category_id,cover,description,isbn,pages,title,id) values (?,?,?,?,?,?,default) [22001-224]
+2024-06-13 15:32:59.090440+03:00 jdbc[34]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "'NOW A MAJOR NETFLIX SERIES  THE AWARD-WINNING, CRITICALLY ACCLAIMED, MILLION-CO... (311)"; SQL statement:
+insert into books (category_id,cover,description,isbn,pages,title,id) values (?,?,?,?,?,?,default) [22001-224]
+2024-06-13 15:33:09.634605+03:00 jdbc[35]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "'NOW A MAJOR NETFLIX SERIES  THE AWARD-WINNING, CRITICALLY ACCLAIMED, MILLION-CO... (311)"; SQL statement:
+insert into books (category_id,cover,description,isbn,pages,title,id) values (?,?,?,?,?,?,default) [22001-224]
+2024-06-13 15:33:14.234253+03:00 jdbc[34]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "'NOW A MAJOR NETFLIX SERIES  THE AWARD-WINNING, CRITICALLY ACCLAIMED, MILLION-CO... (311)"; SQL statement:
+insert into books (category_id,cover,description,isbn,pages,title,id) values (?,?,?,?,?,?,default) [22001-224]
+2024-06-13 15:35:06.820884+03:00 jdbc[34]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "'NOW A MAJOR NETFLIX SERIES  THE AWARD-WINNING, CRITICALLY ACCLAIMED, MILLION-CO... (311)"; SQL statement:
+insert into books (category_id,cover,description,isbn,pages,title,id) values (?,?,?,?,?,?,default) [22001-224]
+2024-06-13 15:35:10.709866+03:00 jdbc[34]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "'NOW A MAJOR NETFLIX SERIES  THE AWARD-WINNING, CRITICALLY ACCLAIMED, MILLION-CO... (311)"; SQL statement:
+insert into books (category_id,cover,description,isbn,pages,title,id) values (?,?,?,?,?,?,default) [22001-224]
+2024-06-13 15:38:59.681611+03:00 jdbc[35]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "'Human or vampire, the rules of survival are the same: never trust, never yield,... (1127)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 15:39:29.982460+03:00 jdbc[35]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "'Interesting bookHuman or vampire, the rules of survival are the same: never tru... (784)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 15:39:55.881430+03:00 jdbc[34]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "'Interesting bookHuman or vampire, the rules of survival are the same: never tru... (701)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 15:40:14.645946+03:00 jdbc[34]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "'Interesting bookHuman or vampire, the rules of survival are the same: never tru... (589)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 15:40:23.907405+03:00 jdbc[35]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "'Interesting bookHuman or vampire, the rules of survival are the same: never tru... (551)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 15:40:36.543089+03:00 jdbc[34]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "'Interesting bookHuman or vampire, the rules of survival are the same: never tru... (479)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 15:40:49.576691+03:00 jdbc[34]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "'Interesting bookHuman or vampire, the rules of survival are the same: never tru... (387)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 15:40:57.740296+03:00 jdbc[35]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "'Interesting bookHuman or vampire, the rules of survival are the same: never tru... (322)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 15:47:38.874888+03:00 jdbc[34]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "'ExelentHuman or vampire, the rules of survival are the same: never trust, never... (1134)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 15:47:40.383244+03:00 jdbc[35]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "'ExelentHuman or vampire, the rules of survival are the same: never trust, never... (1134)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 15:49:24.597971+03:00 jdbc[35]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "'Human or vampire, the rules of survival are the same: never trust, never yield,... (370)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 15:49:25.296408+03:00 jdbc[35]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "DESCRIPTION CHARACTER VARYING(255)": "'Human or vampire, the rules of survival are the same: never trust, never yield,... (370)"; SQL statement:
+update books set category_id=?,cover=?,description=?,isbn=?,pages=?,title=? where id=? [22001-224]
+2024-06-13 15:52:43.774033+03:00 jdbc[45]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-224]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:218)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:135)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:724)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:703)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection was not closed by the application and is garbage collected [90018-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 16 more
