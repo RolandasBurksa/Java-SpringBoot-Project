@@ -1,5 +1,9 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import { isUserLoggedIn, logout } from "../services/AuthService";
+import {
+  isUserLoggedIn,
+  logout,
+  getUsernameOrEmail,
+} from "../services/AuthService";
 
 const HeaderComponent = () => {
   // const navigate = useNavigate();
@@ -10,12 +14,21 @@ const HeaderComponent = () => {
 
   const isAuth = isUserLoggedIn();
 
+  const usernameOrEmail = isAuth ? getUsernameOrEmail() : "";
+
   const navigator = useNavigate();
 
   function handleLogout() {
     logout();
     navigator("/login");
   }
+
+  const getInitials = (name) => {
+    if (name && name.length >= 2) {
+      return name.substring(0, 2).toUpperCase();
+    }
+    return "";
+  };
 
   return (
     <div>
@@ -97,6 +110,20 @@ const HeaderComponent = () => {
           >
             Add Book
           </button> */}
+          {isAuth && (
+            <button
+              className="users-initials"
+              style={{
+                marginLeft: "10px",
+                marginRight: " 10px",
+                padding: "10px",
+                background: "white",
+                borderRadius: "50%",
+              }}
+            >
+              {getInitials(usernameOrEmail)}
+            </button>
+          )}
         </nav>
       </header>
     </div>
